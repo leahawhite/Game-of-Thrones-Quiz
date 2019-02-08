@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game of Thrones Quiz</title>
+    <meta name="description" content='A quiz to test your knowledge of the TV show \"Game of Thrones.\"'>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header role='banner'>
+      <ul>
+        <li>Question: <span class='question-number'>0</span>/10</li>
+        <li>Score: <span class='score'>0</span></li>
+      </ul>  
+      <div class='pic-holder'>
+        <img src='images/crypt-shoot-promo.jpg' alt='Jon Snow, Sansa Stark and Arya Stark stand in front of statues of themselves in the family crypt.'/>
+      </div>  
+    </header>
+    <main role='main'>
+        <section class='quiz-start'>
+          <h1>HOW WELL DO YOU KNOW GAME OF THRONES?</h1>
+          <button type='button' id='js-start-button' class='start-button'>PLAY NOW</button>
+        </section>
+        <section class='question-answers'>
+        </section>
+      </main>
+    <footer>
+      <p>All images from HBO.com.</p>
+    </footer role="contentinfo">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
