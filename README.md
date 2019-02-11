@@ -34,10 +34,10 @@ Technical requirements included:
 * Be fully usable by keyboard
 
 ## Challenges
-##Layout:##   
+**Layout:**   
 One of the big challenges I faced with this app was trying to bring my design to life within the constraints of my current CSS skill set. Detailed CSS layout is daunting for a beginner like me, so I ended up simplifying quite a bit. I could definitely tweak the CSS forever, but I must move on! 
 
-##Accessibility:##  
+**Accessibility:**  
 One of the other obstacles I encountered was balance my design goals with accessibility. For instance, I originally wanted the clickable answer inputs to appear as clean text labels, not clunky radio buttons or drop-down lists, but since I needed users to choose only one answer, I opted for radio buttons. And since an answer was required for form submission, I made the radio button inputs required. To achieve a "cleaner" look, I originally added the CSS { position: absolute } to the inputs and offset them off the visible body. However, I discovered in testing that the "required" message does not pop up if you have rudely disappeared your radio buttons! I made them { opacity: 0; } instead. 
 
 After reading through several accessibility sites, I learned that, in general, keeping native form attributes intact makes for better navigation with assistive devices. I hope to improve my balance of accessibility and design in the future.
