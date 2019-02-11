@@ -31,7 +31,7 @@ header {
 }
 
 .pic-holder {
-  margin: 10px;
+  margin: 10px 10px 5px 10px;
 }
 
 .pic-holder img {
@@ -52,6 +52,7 @@ h1 {
 
 .quiz-start h1 {
   font-size: 26px;
+  margin-top: 20px;
 }
 
 button {
@@ -81,7 +82,7 @@ button:active {
 
 header > ul {
   list-style-type: none;
-  /* display: inline; */
+  display: inline;
 }
 
 header li {
@@ -120,6 +121,14 @@ footer {
   padding: 0;
 }
 
+#question-form legend {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
 #question-form fieldset {
   border: none;
   margin: 0;
@@ -147,9 +156,9 @@ footer {
 }
 
 #question-form label input {
-  position: absolute;
+  display: block;
+  float: left;
   opacity: 0;
-  top: -20px;
 }
 
 #question-form input:checked + span {
@@ -189,14 +198,22 @@ footer {
     text-align: center;
   }
 
+  #question-form input {
+    display: block;
+    float: left; 
+  }
+
+  #question-form legend {
+    margin-bottom: 20px;
+  }
+
   .question-answers h1 {
     font-size: 22px;
   }
 
-  .question, .answer, .results h1 {
+  .answer, .results h1, #question-form legend  {
     text-align: center;
     font-size: 22px;
     padding: 20px;
   }
 }
-

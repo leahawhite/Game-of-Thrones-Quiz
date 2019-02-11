@@ -86,7 +86,7 @@ const QUIZCONTENT = [
     alt: 'Brienne stands in front of a wall of swords.'
   },
   {
-    question: 'Hodor\'s nickname is derived from the phrase:',
+    question: 'Hodor\'s nickname is derived from:',
     answers: [
       'Hold on',
       'Hold the door',
@@ -103,9 +103,9 @@ const QUIZCONTENT = [
       'Tywin Lannister',
       'Cersei Lannister',
       'Lord Varys',
-      'Petyr \"Littlefinger\" Baelish'
+      'Petyr Littlefinger Baelish'
     ],
-    correctAnswer: 'Petyr \"Littlefinger\" Baelish',
+    correctAnswer: 'Petyr Littlefinger Baelish',
     pic: 'images/empty_throne.jpg',
     alt: 'The Iron Throne sits ominously empty.'
   },
@@ -123,14 +123,14 @@ const QUIZCONTENT = [
   }
 ];
 
-// cached jQuery selectors
+// cached jQuery selector
 const $questionAnswers = $('.question-answers');
 
 // initialize counters to 0 
 let questionNumber = 0;
 let score = 0;
 
-//generate question HTML
+// generate question HTML
 function generateQuestion() {
 
   const answers = QUIZCONTENT[questionNumber].answers.map((answer, index) => {
@@ -142,18 +142,16 @@ function generateQuestion() {
   });
 
   return `
-  <div class='question'>
-  <h1>${QUIZCONTENT[questionNumber].question}</h1>
-  </div>
     <form id='question-form' class='js-question-form'>
       <fieldset>
+        <legend>${QUIZCONTENT[questionNumber].question}</legend>
         ${answers.join('')}
       </fieldset>
       <button type='submit' id='submit-button'>SUBMIT</button>
     </form>`;
 }
 
-//switches image src and alt
+// switches image src and alt
 function changePic() {
   $('.pic-holder').html(`<img src='${QUIZCONTENT[questionNumber].pic}' alt='${QUIZCONTENT[questionNumber].alt}'/>`);
 }
@@ -181,9 +179,10 @@ function updateScore() {
   $('.score').text(`${score}`);
 }
 
-// compares user answer to correct answer, shows feedback
+// on form submit, compares user answer to correct answer, 
+// shows feedback based on correct/incorrect
 function submitAnswer() {
-  $questionAnswers.on('click', '#submit-button', function (event) {
+  $questionAnswers.submit(function (event) {
     event.preventDefault();
 
     let userAnswer = $("input[type=radio][name=answer]:checked").val();
@@ -209,7 +208,7 @@ function feedbackMessage(isCorrect, message) {
   }
 }
 
-// Render results HTML in DOM
+// Render final quiz results HTML in DOM
 // change picture
 function showResults() {
   let message;
@@ -247,11 +246,13 @@ function handleNextQuestion() {
   });
 }
 
-// returns to first question,
-// updates question number and score
 function handleRestart() {
   $questionAnswers.on('click', '#restart-button', function (event) {
-    location.reload();
+    questionNumber = 0;
+    score = 0;
+    $('.question-number').text(`${questionNumber + 1}`);
+    $('.score').text(`${score}`);
+    renderQuestion();
   });
 }
 
