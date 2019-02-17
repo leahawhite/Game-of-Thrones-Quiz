@@ -62,9 +62,9 @@ const QUIZCONTENT = [
     alt: 'Arya Stark stands on a bridge overlooking the city.',
   },
   {
-    question: 'Daenerys and her army launch barrels of these over the walls of Meereen:',
+    question: 'What do Daenerys and her army launch over the walls of Meereen?',
     answers: [
-      'The heads of her enemies',
+      'Severed heads',
       'Dragon dung',
       'Broken slave collars',
       'Fireballs'
@@ -103,9 +103,9 @@ const QUIZCONTENT = [
       'Tywin Lannister',
       'Cersei Lannister',
       'Lord Varys',
-      'Petyr Littlefinger Baelish'
+      'Petyr Baelish'
     ],
-    correctAnswer: 'Petyr Littlefinger Baelish',
+    correctAnswer: 'Petyr Baelish',
     pic: 'images/empty_throne.jpg',
     alt: 'The Iron Throne sits ominously empty.'
   },
@@ -113,13 +113,13 @@ const QUIZCONTENT = [
     question: 'Jon Snow comes face to face with the Night King at the Battle of:',
     answers: [
       'Hardhome',
-      'the Whispering Wood',
+      'the Red Keep',
       'the Blackwater',
       'the Bastards'
     ],
     correctAnswer: 'Hardhome',
     pic: 'images/nights-king.jpg',
-    alt: 'In an icy landscape, the Night King raises his arms to resurrect the dead.'
+    alt: 'The Night King raises his arms to resurrect the dead.'
   }
 ];
 
