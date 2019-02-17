@@ -74,7 +74,7 @@ const QUIZCONTENT = [
     alt: 'Jorah, Dany, and Missandei stare up at the walls of Meereen.'
   },
   {
-    question: 'When Jaime Lannister gives Brienne of Tarth his Valyrian steel sword, she names it:',
+    question: 'When Jaime gives Brienne his Valyrian steel sword, she names it:',
     answers: [
       'Lightbringer',
       'Ice',
